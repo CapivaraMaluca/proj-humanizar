@@ -5,7 +5,7 @@ exports.up = function(knex) {
       table.varchar('nome').notNullable();
       table.date('dataNascimento').notNullable();
       table.varchar('email').notNullable();
-      table.varchar('nomeSocial').notNullable();
+      table.varchar('nomeSocial');
       table.varchar('especialidade').notNullable();
       table.integer('horaDisponibilidade').notNullable();
   })
