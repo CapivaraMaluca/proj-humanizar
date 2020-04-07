@@ -2,7 +2,7 @@ const express = require('express')
 const routes = express.Router()
 const connection = require('./database/conection');
 
-const loginController = require('./controllers/loginController');
+const sessionAdmController = require('./controllers/sessionAdmController');
 const cadastroVoluntarioController = require('./controllers/cadastroVoluntarioController');
 const cadastroAuxiliarController = require('./controllers/cadastroAuxiliarController');
 
@@ -10,7 +10,8 @@ const cadastroAuxiliarController = require('./controllers/cadastroAuxiliarContro
 routes.post('/cadastroVoluntarioController', cadastroVoluntarioController.create);
 
 routes.post('/cadastroAuxiliarController', cadastroAuxiliarController.create);
-
+//post pq esta criando uma sessão um login
+routes.post('/sessionAdmController', sessionAdmController.create);
 
 routes.get('/login',(request, response) =>
 {
