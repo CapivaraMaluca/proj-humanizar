@@ -6,7 +6,7 @@ exports.up = function(knex) {
       table.date('dataNascimento').notNullable();
       table.varchar('sexo').notNullable();
       table.varchar('email').notNullable();
-      table.integer('senha').notNullable();
+      table.varchar('senha').notNullable();
   })
 };
 
